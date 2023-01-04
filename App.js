@@ -1,13 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
-import  {Node} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -55,6 +46,7 @@ const Section = ({children, title}) => {
 };
 
 const App = () => {
+
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -76,8 +68,7 @@ const App = () => {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
+            Hello World
           </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
@@ -102,15 +93,27 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: 24,
-    fontWeight: '600',
+    // fontWeight: '600',
+    fontFamily: 'Montserrat-Bold',
+    color: Colors.black,
   },
   sectionDescription: {
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
+    color: Colors.dark,
   },
   highlight: {
     fontWeight: '700',
+  },
+
+  footer: {
+    color: Colors.dark,
+    fontSize: 12,
+    fontWeight: '600',
+    padding: 4,
+    paddingRight: 12,
+    textAlign: 'right',
   },
 });
 
